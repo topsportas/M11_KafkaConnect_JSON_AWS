@@ -130,6 +130,9 @@ resource "local_file" "aws_connector_config" {
       "topics.dir"              = var.S3_TOPICS_DIR
       "aws.access.key.id"       = var.AWS_ACCESS_KEY_ID
       "aws.secret.access.key"   = var.AWS_SECRET_ACCESS_KEY
+      "transforms"                      = "maskDates"
+      "transforms.maskDates.type"       = "org.apache.kafka.connect.transforms.MaskField$Value"
+      "transforms.maskDates.fields"     = "date_time,srch_ci,srch_co"
     }
   })
 
