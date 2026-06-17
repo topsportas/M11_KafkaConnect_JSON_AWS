@@ -1,0 +1,15 @@
+{
+  "config": {
+    "aws.access.key.id": "",
+    "aws.secret.access.key": "",
+    "bootstrap.servers": "kafka:9071",
+    "connector.class": "io.confluent.connect.s3.source.S3SourceConnector",
+    "format.class": "io.confluent.connect.s3.format.avro.AvroFormat",
+    "s3.bucket.name": "your-bucket-name",
+    "s3.region": "us-west-1",
+    "tasks.max": "3",
+    "topics": "expedia",
+    "topics.dir": "topics"
+  },
+  "name": "expedia"
+}
